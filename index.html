@@ -187,20 +187,70 @@ function googleTranslateElementInit() {
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top">  ^  </button>
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 </head>
 <body>
 <center>
+<div style="background-color:lightgrey;color:white;padding:30px">
 <div id="container">
 <img src="https://i.ibb.co/P1f4wSN/explaination.jpg" class="hidden-xs">
 <iframe src="https://pixworld.io/ssssport/?play=1" height="650" width="600" class="hidden-xs"></iframe>
 </div>
+</div>
+<div style="background-color:lightgrey;color:white;padding:30px">
 <h1 style="color:white;" class="hidden-xs"> Rules: </h1>
 <p style="color:white;" class="hidden-xs"><br><br> #1 do not cross the edge lines or you'll be considered out of the game. <br>
 #2 there is only a single runner on each team, he has to dodge the opposing team which is trying to stop him from getting a goal<br> ( each team goes to the side of the runner that isn't on there team ) aswell as 2 defenders.
 <br>#3 the defenders have a range around them ( the radius size is decided at the start of the match )<br> you can't touch the range, and if you go inside you can't leave,<br> the only way to get a goal would be to make the defender stand near it so its within the range.
 </p>
-
+</div>
 
 
 
