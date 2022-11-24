@@ -178,7 +178,14 @@ document.onkeydown = function (e) {
 </style>
 <br>
 <div id="google_translate_element"></div> <br>
-  <p> not supported on mobiles </p>
+<style>
+	@media only screen and (min-width: 680px) {
+	  .hide-pc {
+		display:none;
+	  }
+	}
+</style>
+  <p class="hide-pc"> not supported on mobiles </p>
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
@@ -235,6 +242,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 </script>
+
 </head>
 <body>
 <center>
