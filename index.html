@@ -176,7 +176,25 @@ document.onkeydown = function (e) {
 }
 
 </style>
+<script>
+function goBack() {
+  window.history.back()
+}
+
+function goForward() {
+  window.history.forward()
+}
+</script>
+<style>
+.button5 {border-radius: 50%;}
+</style>
+
 <br>
+&nbsp;
+<input class="button button5" type="button" value="<" onclick="goBack()">
+<input class="button button5" type="button" value=">" onclick="goForward()">
+<br>
+<center>
 <div id="google_translate_element"></div> <br>
 <style>
 	@media only screen and (min-width: 680px) {
@@ -186,6 +204,7 @@ document.onkeydown = function (e) {
 	}
 </style>
   <p class="hide-pc"> not supported on mobiles </p>
+</center>
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
